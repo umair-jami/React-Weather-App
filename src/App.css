@@ -1,38 +1,105 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  background: linear-gradient(135deg, #87CEEB, #FFD700);
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin: 20px;
+  font-size: 2.5rem;
+  color: #fff;
+}
+
+.in {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.in input {
+  padding: 10px;
+  width: 300px;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  outline: none;
+  font-size: 1rem;
+}
+
+.in button {
+  margin-left: 10px;
+  padding: 10px 20px;
+  background-color: #FFA500;
   color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.App-link {
-  color: #61dafb;
+.in button:hover {
+  background-color: #FF6347;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.weatherBox {
+  width: 100%;
+  max-width: 400px;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.weatherBox h2 {
+  font-size: 2rem;
+  color: #333;
+}
+
+.weatherBox p {
+  font-size: 1.2rem;
+  color: #555;
+  text-transform: capitalize;
+}
+
+img {
+  width: 80px;
+  height: 80px;
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  .in input {
+    width: 200px;
+  }
+
+  .in button {
+    padding: 10px 15px;
+  }
+
+  .weatherBox {
+    max-width: 300px;
+    padding: 15px;
+    position: relative;
+  }
+
+  .wimg {
+    width: 60px;
+    height: 60px;
   }
 }
